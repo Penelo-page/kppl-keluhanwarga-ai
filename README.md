@@ -1,5 +1,5 @@
 # 🏛️ Keluhan Warga AI - Prototype Sistem Pengaduan Masyarakat
-> **Final Project Mata Kuliah Konsep & Perancangan Perangkat Lunak (KPPL)** > Rekayasa Kecerdasarn Artifisial, Institut Teknologi Sepuluh Nopember (ITS)
+> **Final Project Mata Kuliah Konsep & Perancangan Perangkat Lunak (KPPL)** > Rekayasa Kecerdasan Artifisial, Institut Teknologi Sepuluh Nopember (ITS)
 
 Repository ini digunakan untuk kolaborasi pengembangan prototype *full-stack* berbasis Kecerdasan Artifisial yang berfungsi menganalisis, mengklasifikasikan, dan memprioritaskan teks keluhan warga secara otomatis.
 

@@ -12,8 +12,8 @@ Peletakan folder seperti berikut :
 ```text
 kppl-keluhanwarga-ai/
 ├── frontend/          
-│   └── index.html      <-- UI Input Warga & Riwayat Laporan [Sitti & Anggota 4]
+│   └── index.html      <-- UI Input Warga & Riwayat Laporan
 ├── backend/           
-│   ├── .gitkeep        <-- Ruang untuk kode server FastAPI/Flask [Anggota 2]
+│   ├── .gitkeep        <-- Ruang untuk kode server FastAPI/Flask
 └── ai_model/          
-    └── .gitkeep        <-- Ruang untuk Jupyter Notebook & file .pkl [Anggota 3]
+    └── .gitkeep        <-- Ruang untuk Jupyter Notebook & file .pkl

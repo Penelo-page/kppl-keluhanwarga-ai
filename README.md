@@ -7,7 +7,7 @@ Repository ini digunakan untuk kolaborasi pengembangan prototype *full-stack* be
 ---
 
 ## 📂 Struktur Folder Proyek
-Semua kode wajib diletakkan pada folder spesifik masing-masing agar tidak terjadi konflik (*code collision*) saat melakukan push ke Git:
+Peletakan folder seperti berikut :
 
 ```text
 kppl-keluhanwarga-ai/

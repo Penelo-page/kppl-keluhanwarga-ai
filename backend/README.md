@@ -1,8 +1,8 @@
 ---
 title: Keluhan Warga Backend
 emoji: 🏛️
-colorFrom: zinc
-colorTo: slate
+colorFrom: gray
+colorTo: blue
 sdk: docker
 pinned: false
 ---

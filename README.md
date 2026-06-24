@@ -76,4 +76,24 @@ Semua respons API dikembalikan dalam format standard JSON:
 | :--- | :--- | :--- |
 | `POST` | `/keluhan/` | Mengirim aduan baru, menganalisis kategori & prioritas, lalu menyimpannya ke database. |
 | `GET` | `/keluhan/{id_keluhan}` | Mengambil data detail keluhan berdasarkan ID laporan. |
-| `GET` | `/dashboard/` | Mengambil data metrik statistik dashboard petugas. |
+| GET | /dashboard/ | Mengambil data metrik statistik dashboard petugas. |
+
+## Panduan Deployment
+
+### 1. Backend (Hugging Face Spaces)
+Backend dideploy menggunakan Docker Space di Hugging Face.
+1. Buat Space baru di Hugging Face, pilih SDK **Docker** (gunakan template Blank).
+2. Unggah isi folder `backend/` ke root repository Space Anda.
+3. Buka tab **Settings** di Space Hugging Face Anda, tambahkan variabel/secrets berikut:
+   * `SUPABASE_URL`: URL API Supabase Anda.
+   * `SUPABASE_SECRET_KEY`: Service/Secret Key Supabase Anda.
+4. Hugging Face akan membangun container menggunakan `Dockerfile` yang telah disediakan dan menjalankannya pada port default `7860`. URL API backend Anda akan berformat: `https://<username>-<space-name>.hf.space`.
+
+### 2. Frontend (Netlify)
+Frontend dideploy langsung ke Netlify.
+1. Hubungkan repository GitHub Anda ke Netlify.
+2. Netlify akan mendeteksi file `netlify.toml` secara otomatis untuk mengatur build directory (`frontend/dist`) dan command build (`pnpm build`).
+3. Pada dashboard Netlify, masuk ke **Site configuration** -> **Environment variables**, tambahkan variabel:
+   * `VITE_API_URL`: Isi dengan URL backend Hugging Face Spaces Anda (contoh: `https://username-space-name.hf.space`).
+4. Jalankan deploy, dan web React SPA Anda siap diakses.
+

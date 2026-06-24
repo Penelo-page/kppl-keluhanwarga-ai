@@ -97,3 +97,18 @@ Frontend dideploy langsung ke Netlify.
    * `VITE_API_URL`: Isi dengan URL backend Hugging Face Spaces Anda (contoh: `https://username-space-name.hf.space`).
 4. Jalankan deploy, dan web React SPA Anda siap diakses.
 
+---
+
+## Otomatisasi CI/CD dengan GitHub Actions
+
+Proyek ini telah dilengkapi dengan workflow CI/CD otomatis di `.github/workflows/deploy.yml` yang akan berjalan setiap kali Anda melakukan push ke branch `main`.
+
+Untuk mengaktifkannya, buka repositori GitHub Anda, masuk ke menu **Settings -> Secrets and variables -> Actions**, lalu tambahkan **Repository secrets** berikut:
+
+1. **`HF_TOKEN`**: Token akses Hugging Face (dibuat di *Settings -> Access Tokens* dengan role **Write**).
+2. **`HF_SPACE`**: Nama target Space Hugging Face Anda, dengan format `username/nama-space` (contoh: `Penelo-page/keluhan-warga-be`).
+3. **`VITE_API_URL`**: URL backend Hugging Face Spaces Anda (contoh: `https://username-space-name.hf.space`).
+4. **`NETLIFY_AUTH_TOKEN`**: Token akses Netlify Anda (dapat dibuat di *User settings -> Applications -> Personal access tokens*).
+5. **`NETLIFY_SITE_ID`**: ID situs Netlify Anda (dapat disalin dari *Site configuration -> General -> Site details -> API ID*).
+
+

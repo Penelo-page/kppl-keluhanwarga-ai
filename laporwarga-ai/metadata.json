@@ -1,0 +1,6 @@
+{
+  "name": "LaporWarga AI",
+  "description": "Aplikasi analisis dan prioritas keluhan warga menggunakan AI",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

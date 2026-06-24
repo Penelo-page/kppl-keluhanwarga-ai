@@ -1,5 +1,5 @@
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { FolderKanban, ArrowRight, AlertCircle, Loader2 } from "lucide-react";
+import { FolderKanban, ArrowRight, ArrowLeft, AlertCircle, Loader2 } from "lucide-react";
 import MissingComplaint from "../components/common/MissingComplaint";
 import ComplaintSummaryCard from "../components/classification/ComplaintSummaryCard";
 import AccuracyCard from "../components/classification/AccuracyCard";
@@ -46,8 +46,15 @@ export default function ClassificationResult() {
 
       <AccuracyCard category={complaint.category} confidenceScore={complaint.confidenceScore} />
 
-      <div className="pt-6 flex justify-end">
-         <button
+      <div className="pt-6 flex flex-col-reverse sm:flex-row justify-between gap-3">
+        <button
+          onClick={() => navigate("/")}
+          className="inline-flex items-center justify-center rounded-md bg-white px-5 py-2.5 text-sm font-medium text-zinc-700 border border-zinc-200 shadow-sm transition-colors hover:bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-zinc-200"
+        >
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Buat Laporan Baru
+        </button>
+        <button
           onClick={() => navigate(`/priority/${complaint.id}`, { state: { complaint } })}
           className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
         >

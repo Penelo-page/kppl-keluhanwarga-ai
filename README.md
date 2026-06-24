@@ -42,11 +42,7 @@ cp .env.example .env
 ```
 Sesuaikan nilai `SUPABASE_URL` dan `SUPABASE_SECRET_KEY` dengan proyek Supabase Anda.
 
-### 2. Setup Database Supabase
-Jalankan file migrasi SQL berikut pada SQL Editor Supabase Anda:
-`supabase/migrations/20260624014657_create_keluhan_table.sql`
-
-### 3. Menjalankan Backend (FastAPI)
+### 2. Menjalankan Backend (FastAPI)
 ```bash
 cd backend
 python -m venv .venv
@@ -56,7 +52,7 @@ fastapi dev app/main.py
 ```
 Backend akan berjalan di `http://localhost:8000`. Dokumentasi Swagger API tersedia di `http://localhost:8000/docs`.
 
-### 4. Menjalankan Frontend (Vite)
+### 3. Menjalankan Frontend (Vite)
 ```bash
 cd frontend
 pnpm install
